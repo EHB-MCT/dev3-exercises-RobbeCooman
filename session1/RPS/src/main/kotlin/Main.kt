@@ -1,9 +1,5 @@
 fun main () {
-    val array = arrayOf<String>("jef","jos","erik","mark","dirk")
 
-    for (name in array) {
-        greet(name)
-    }
     rps()
 }
 
@@ -30,7 +26,6 @@ fun rps (){
     else if (playerInput == "rock" && computerChoice == "scissors") result = "you win"
     else if (playerInput == "paper" && computerChoice == "rock") result = "you win"
     else if (playerInput == "scissors" && computerChoice == "paper") result = "you win"
-    else if (playerInput == "rock" && computerChoice == "rock") result = "you win"
     else result = "you lose"
 
     println("You chose $playerInput and the computer chose $computerChoice, so $result")
