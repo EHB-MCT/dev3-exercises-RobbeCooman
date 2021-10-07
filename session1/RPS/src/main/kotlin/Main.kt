@@ -10,7 +10,7 @@ fun greet (name: String){
 fun rps (){
 
     //array
-    val choices = arrayOf<String>("rock", "paper", "scissors")
+    val choices = arrayOf("rock", "paper", "scissors")
 
     //computers choice
     val computerChoice = choices.random()
