@@ -1,3 +1,5 @@
+import kotlin.random.Random
+
 fun main() {
 
 challengeOne()
@@ -22,8 +24,19 @@ fun challengeOne(){
 
 fun win(){
     println("Congrats")
+    challengeTwo()
 }
 
 fun gameOver(){
     println("you are eaten by a giraffe")
+}
+
+fun challengeTwo(){
+println("Next challenge! The computer will generate a random number, is it gonna be low (1-3) or high (4-6)?")
+println(rollDice())
+}
+
+fun rollDice(){
+    val randomNumber = Random.nextInt(6)
+
 }
