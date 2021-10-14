@@ -42,7 +42,16 @@ fun challengeTwo(){
 }
 
 fun challengeThree(){
-    
+    val answers = setOf<String>("shovel", "Stone", "Sword")
+
+    val playerInput = readLine()
+
+    if (answers.contains(playerInput)){
+        challengeTwo()
+    }else {
+        gameOver()
+    }
+
 }
 
 
