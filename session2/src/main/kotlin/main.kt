@@ -1,4 +1,5 @@
 import kotlin.random.Random
+import kotlin.test.assertContentEquals
 
 fun main() {
 
@@ -16,27 +17,44 @@ fun challengeOne(){
     val playerInput = readLine()
 
     if (answers.contains(playerInput)){
-        win()
+        challengeTwo()
     }else {
         gameOver()
     }
 }
 
+fun challengeTwo(){
+    val diceResult = (1..6).random()
+    val userAnswer = readLine()
+    var acceptedAnswers = setOf<Int>()
+
+    if (userAnswer == "low") {
+        acceptedAnswers = setOf(1, 2, 3)
+    }else{
+           acceptedAnswers = setOf(4, 5, 6)
+        }
+
+    if (acceptedAnswers.contains(diceResult)){
+        challengeThree()
+    }else{
+        gameOver()
+    }
+}
+
+fun challengeThree(){
+    
+}
+
+
+
+
 fun win(){
-    println("Congrats")
-    challengeTwo()
+    println("congrats")
 }
 
 fun gameOver(){
-    println("you are eaten by a giraffe")
+    print("you are eaten by a giraffe")
 }
 
-fun challengeTwo(){
-println("Next challenge! The computer will generate a random number, is it gonna be low (1-3) or high (4-6)?")
-println(rollDice())
-}
 
-fun rollDice(){
-    val randomNumber = Random.nextInt(6)
 
-}
