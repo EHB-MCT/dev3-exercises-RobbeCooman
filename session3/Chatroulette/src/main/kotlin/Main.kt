@@ -1,10 +1,13 @@
 fun main(){
 
-    val jef = Person("Jef")
-    val jos = Person("Jos")
+    val persons = arrayOf(Student("Jef"), Teacher("Jos"), Comedian("Mike"))
 
-    val arr = arrayOf(jef, jos)
+    val chatPartner = persons.random()
+    chatPartner.introduce()
+    chatPartner.talk()
 
-    println(arr.random().talk())
+
+
+
 
 }
