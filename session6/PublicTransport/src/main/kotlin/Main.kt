@@ -16,11 +16,23 @@ fun main() {
         "jdbc:" + "mysql" + "://" +
                 "dt5.ehb.be" +
                 ":" + "3306" + "/" +
-                "2122DEV3013",
+                credentials.databaseUser,
         connectionProps)
+
+
+
 
     println("Where do you want to go?")
     val destination = readLine()
+
+    val query = "SELECT rides LEFT JOIN trains ON rides.train_id = trains.id WHERE arrivalCity = ?"
+    val statement = connection.prepareStatement(query)
+    statement.setString(1, destination)
+    val result = statement.executeQuery()
+
+    while(result.next()) {
+        println(result.getString("departure_time"))
+    }
 
 
 
