@@ -14,8 +14,13 @@ class Duolingo (){
     )
 
     fun play(){
+        var x = 0
+        while (x < 5) {
+            val test = words.random().original
+            println(test)
+            x++
 
-
+        }
 
 
     }
