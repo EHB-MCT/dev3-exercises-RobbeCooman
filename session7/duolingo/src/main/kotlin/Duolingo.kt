@@ -1,19 +1,22 @@
 class Duolingo (){
 
-    val woord1 = Word("bird", "vogel", "English")
-    val woord2 = Word("street", "straat", "English")
-    val woord3 = Word("tree", "boom", "English")
-    val woord4 = Word("plane", "vliegtuig", "English")
-    val woord5 = Word("keyboard", "toetsenbord", "English")
-    val woord6 = Word("table", "tafel", "French")
-    val woord7 = Word("chaise", "stoel", "French")
-    val woord8 = Word("carte", "kaart", "French")
-    val woord9 = Word("ordinateur", "computer", "French")
-    val woord10 = Word("souris", "muis", "French")
-
-
+    val words= listOf<Word>(
+        Word("bird", "vogel", "English"),
+        Word("street", "straat", "English"),
+        Word("tree", "boom", "English"),
+        Word("plane", "vliegtuig", "English"),
+        Word("keyboard", "toetsenbord", "English"),
+        Word("table", "tafel", "French"),
+        Word("chaise", "stoel", "French"),
+        Word("carte", "kaart", "French"),
+        Word("ordinateur", "computer", "French"),
+        Word("souris", "muis", "French")
+    )
 
     fun play(){
+
+
+
 
     }
 
