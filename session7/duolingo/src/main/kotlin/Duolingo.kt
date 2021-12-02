@@ -1,6 +1,6 @@
 class Duolingo (){
 
-    val words= listOf<Word>(
+    val words= setOf<Word>(
         Word("bird", "vogel", "English"),
         Word("street", "straat", "English"),
         Word("tree", "boom", "English"),
@@ -14,15 +14,24 @@ class Duolingo (){
     )
 
     fun play(){
-        var x = 0
-        while (x < 5) {
-            val test = words.random().original
-            println(test)
-            x++
+        val selectedWords = words.shuffled().take(5).toMutableSet()
 
+        while (selectedWords.isNotEmpty()){
+        val selectedWord = selectedWords.random()
+        println("weet jij de vertaling van " + selectedWord.original)
+        val userAnswer = readLine()
+
+        if (selectedWord.translated == userAnswer){
+            //good
+            selectedWords.remove(selectedWord)
+        }else{
+            //bad
+            println("dit was de juiste vertaling " + selectedWord.translated)
         }
+        println("you still have " + selectedWords.count() + " words to do")
 
-
+    }
+        println("goeie!")
     }
 
 }
