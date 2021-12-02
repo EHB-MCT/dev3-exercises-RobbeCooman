@@ -18,7 +18,7 @@ class Duolingo (){
 
         while (selectedWords.isNotEmpty()){
         val selectedWord = selectedWords.random()
-        println("weet jij de vertaling van " + selectedWord.original)
+        println("Weet jij de vertaling van het woord " + selectedWord.original + "?")
         val userAnswer = readLine()
 
         if (selectedWord.translated == userAnswer){
@@ -26,12 +26,12 @@ class Duolingo (){
             selectedWords.remove(selectedWord)
         }else{
             //bad
-            println("dit was de juiste vertaling " + selectedWord.translated)
+            println("De juist vertaling van het woord was: " + selectedWord.translated)
         }
-        println("you still have " + selectedWords.count() + " words to do")
+        println("Je hebt nog " + selectedWords.count() + " woorden te vertalen")
 
     }
-        println("goeie!")
+        println("Goeie! Je hebt alle woorden vertaald!")
     }
 
 }
