@@ -14,7 +14,15 @@ class Duolingo (){
     )
 
     fun play(){
-        val selectedWords = words.shuffled().take(5).toMutableSet()
+        //val selectedWords = words.shuffled().take(5).toMutableSet()
+
+        println("Hoeveel woorden zou je graag willen vertalen?")
+        val roundsize = readLine()
+        println("Uit welke taal zou je graag willen vertalen?")
+        val selectedLanguage = readLine()
+        val selectedWords = words.filter { it.language == selectedLanguage}.shuffled().take(roundsize!!.toInt()).toMutableSet()
+
+
 
         while (selectedWords.isNotEmpty()){
         val selectedWord = selectedWords.random()
