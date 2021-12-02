@@ -13,6 +13,16 @@ class Duolingo (){
         Word("souris", "muis", "French")
     )
 
+
+
+
+
+
+
+
+
+
+
     fun play(){
         //val selectedWords = words.shuffled().take(5).toMutableSet()
 
