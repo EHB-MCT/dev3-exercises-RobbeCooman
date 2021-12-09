@@ -4,6 +4,7 @@ import java.util.*
 fun main() {
     val credentials = Credentials()
 
+
     Class.forName("com.mysql.cj.jdbc.Driver").getDeclaredConstructor().newInstance()
 
 // Prepare credentials
@@ -33,9 +34,4 @@ fun main() {
     while(result.next()) {
         println(result.getString("departure_time"))
     }
-
-
-
-
-
 }
