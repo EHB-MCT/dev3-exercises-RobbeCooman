@@ -47,8 +47,14 @@ class Duolingo (val size: Int = 5, val language: String="English") {
 
             if (answer == selectedWord.translated) {
                 randomWords.remove(selectedWord)
+                if (selectedWord.difficulty > 1) {
+                    selectedWord.difficulty--
+                } else {
+                    throw Exception("The difficulty cant be smaller then 1")
+                }
             } else {
                 println("Het juiste antwoord was ${selectedWord.translated}")
+                selectedWord.difficulty+=2
             }
 
             println("Je moet nog ${randomWords.count()} woorden oplossen")
