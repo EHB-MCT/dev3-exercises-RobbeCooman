@@ -15,16 +15,16 @@ class Duolingo (val size: Int = 5, val language: String="English") {
     //)
 
     var words = mutableSetOf<Word>(
-        EnglishWord("bird", "vogel"),
-        FrenchWord("table", "tafel"),
-        EnglishWord("street", "straat"),
-        FrenchWord("chaise", "stoel"),
-        FrenchWord("carte", "kaart"),
-        EnglishWord("plane", "vliegtuig"),
-        EnglishWord("tree", "boom"),
-        FrenchWord("ordinateur", "computer"),
-        FrenchWord("souris", "muis"),
-        EnglishWord("keyboard", "toetsenbord")
+        EnglishWord("bird", 1,"vogel"),
+        FrenchWord("table",1 ,"tafel"),
+        EnglishWord("street",1, "straat"),
+        FrenchWord("chaise", 2,"stoel"),
+        FrenchWord("carte",1 ,"kaart"),
+        EnglishWord("plane", 2,"vliegtuig"),
+        EnglishWord("tree",1 ,"boom"),
+        FrenchWord("ordinateur",2 ,"computer"),
+        FrenchWord("souris",2 ,"muis"),
+        EnglishWord("keyboard", 2,"toetsenbord")
     )
 
 
